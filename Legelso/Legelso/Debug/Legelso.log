@@ -1,0 +1,4 @@
+﻿  Legelso.cpp
+a:\program\legelso\legelso\legelso.cpp(23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+a:\program\legelso\legelso\legelso.cpp(160): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Legelso.vcxproj -> A:\Program\Legelso\Debug\Legelso.exe
