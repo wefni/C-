@@ -7,7 +7,7 @@
 using namespace std;
 
 bool gameOver;
-const int width = 20;
+const int width = 40;
 const int height = 20;
 int x, y, fruitX,fruitY,score;
 int tailX[100], tailY[100];
@@ -78,6 +78,7 @@ void Draw() {
 			
 		}
 		cout << endl;
+
 	}
 
 	for (int i = 0; i < width+1; i++)
@@ -85,6 +86,9 @@ void Draw() {
 		cout << "°";
 	}
 	cout << endl;
+
+	cout << "Score: " << score;
+
 }
 
 void Input() {
@@ -109,7 +113,7 @@ void Logic() {
 	int prevY = tailY[0];
 	int prev2X, prev2Y;
 
-	for (int i = 1; i < lTail;i ++)
+	for (int i = 0; i < lTail;i ++)
 	{
 		prev2X = tailX[i];
 		prev2Y = tailY[i];
@@ -135,8 +139,6 @@ void Logic() {
 	case DOWN:
 		y++;
 		break;
-	default:
-		break;
 	}
 
 	if (x >= width-2 || x <= 0 || y >= height-1 || y <= 0)
@@ -160,6 +162,7 @@ void Logic() {
 		srand(time(NULL));
 		fruitX = rand() % width;
 		fruitY = rand() % height;
+		score++;
 		lTail++;
 
 	}
